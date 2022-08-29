@@ -14,4 +14,5 @@ public class ProductRequest {
     int percent;
     Long categoryId;
 
+
 }

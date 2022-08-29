@@ -25,7 +25,7 @@ public class PriceServiceImpl implements PriceService {
     public PriceDto save(ProductRequest productRequest, Product product) {
         Price price = priceMapper.productRequestToPrice(productRequest);
         price.setStartDate(new Date());
-        price.setEndDate(new Date(Long.MAX_VALUE));
+        price.setEndDate(new Date(9999, 12,31));
         price.setProduct(product);
         price = priceRepo.save(price);
         return priceMapper.toPriceDto(price);
